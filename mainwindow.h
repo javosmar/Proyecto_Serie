@@ -8,6 +8,8 @@
 #include <QDebug>
 #include <QSerialPortInfo>
 
+//continúa siendo basofia
+
 namespace Ui {
 class MainWindow;
 }
