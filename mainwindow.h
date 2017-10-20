@@ -8,7 +8,6 @@
 #include <QDebug>
 #include <QSerialPortInfo>
 
-
 namespace Ui {
 class MainWindow;
 }
