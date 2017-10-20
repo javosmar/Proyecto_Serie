@@ -1,0 +1,14 @@
+<RCC>
+    <qresource prefix="/">
+        <file>pics/icon-venue-access.png</file>
+        <file>pics/orange-usb-connected-256.png</file>
+        <file>pics/red-usb-disconnected-256.png</file>
+        <file>pics/21_heart_love_pin_gps_map_location-512.png</file>
+        <file>pics/256-256-5fbc60a4335d01cd9c35dcf8fae02410.png</file>
+        <file>pics/263078860dc899795bc2e85ffe1c3e87.jpg</file>
+        <file>pics/484432367.jpg</file>
+        <file>pics/Custom-Icon-Design-Mono-General-4-Refresh.ico</file>
+        <file>pics/Logo_GNAL.png</file>
+        <file>pics/Logo_GNAL_2.png</file>
+    </qresource>
+</RCC>
