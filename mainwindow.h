@@ -9,6 +9,7 @@
 #include <QSerialPortInfo>
 
 //continúa siendo basofia
+//ya dejó de ser basofia
 
 namespace Ui {
 class MainWindow;
