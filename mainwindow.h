@@ -46,6 +46,10 @@ private slots:
 
     void Serial_Pedir_2();
 
+    void on_i2c_enviar_clicked();
+
+    void Serial_Pedir_3();
+
 private:
     Ui::MainWindow *ui;
     QSerialPort *serial;

@@ -97,7 +97,7 @@ void MainWindow::Serial_Error()
 
 void MainWindow::Serial_Pedir()                         //muestreo de datos por pedido
 {
-    if(ui->dato_edit->text().isEmpty())
+    if(ui->dato_edit->text().isEmpty())                 //Cambiar para leer por renglon. Acordar enviar con saltos de linea
         tam = 0;
     if((serial->bytesAvailable() >= tam) && (tam != 0))
     {
@@ -345,4 +345,36 @@ void MainWindow::on_serie_actualizar_clicked()
     foreach (const QSerialPortInfo &info, QSerialPortInfo::availablePorts()){
             ui->serie_combo->insertItem(0,info.portName());
     }
+}
+
+void MainWindow::on_i2c_enviar_clicked()
+{
+    if(ui->i2c_check->isChecked()){
+        serial->write()
+        connect(serial,SIGNAL(readyRead()),this,SLOT(Serial_Pedir_3()));
+
+    }
+}
+
+void MainWindow::Serial_Pedir_3(){
+    qint64 quantity = serial->readLine(leido,sizeof(leido));
+    if(leido[0] > 64){
+        dato_valido = true;
+        contador = 0;
+        ui->recibido_lista->insertItem(0,"............");
+    }
+    if(dato_valido){
+        char imprimir [16] = {0,0,0,0,0,0,0,0,0,0, 0,0,0,0,0,0};
+        for(int h = 0; h < 16; h++){
+            if(leido[h] != '\n')
+                imprimir[h] = leido[h];
+        }
+        ui->recibido_lista->insertItem(0,imprimir);
+        contador++;
+    }
+    if(contador > 4){
+        dato_valido = false;
+    }
+    for(int h = 0; h < 16; h++)
+        leido[h] = 0;
 }
