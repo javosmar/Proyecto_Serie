@@ -1,7 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
-//probando fetch ahora nuevo
+//ahora es posta pull
 
 bool estado_serial = false, ok, conf = false, pedido = false, bandera = false, dato_valido = false;
 QByteArray pedido_serie, recibido_serie(60,0); //recibido_serie(6,0);
